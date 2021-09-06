@@ -8,6 +8,7 @@ from app.api.deps import get_db
 
 router = APIRouter()
 
+# TODO: Add file handler
 
 @router.get("", response_model=List[schemas.ProductResponse])
 def read_products(db: Session = Depends(get_db), skip: int = 0, limit: int = 100) -> Any:
